@@ -4,40 +4,63 @@ import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
+import ImageBorder from '../components/ImageBorder.astro'
+import { Media } from 'accessible-astro-components'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+        <div class="space-content flex flex-col justify-center">
+          <h2>About Me</h2>
+          <p class="text-xl">
+            My name is <b>zTzyrant a.k.a Katachi</b> and I am a website developer. 
+            I'm a college student. I don't study harder, but I study with fun. 
+            If there's a course that I'm not interested in, it's really annoying when I'm forced to study for that course. 
+            <b>What can I do?</b> I can actually do a lot of programming stuff, but sometimes I feel busy and not excited to do it. but I can do some things like make a website, build bots, and do penetration tests.
+            <b>This Website?</b> Ah, this website was made for my portfolio.
+            This website is based on <b>Astro 2.0.3</b> with <a href="https://github.com/markteekman/accessible-astro-components" target="_blank">Accessible Astro settings</a>. 
+            <b>In the future</b>, this website will have many features that I will add for my learning needs. 
+          </p>
+        </div>
+        
+        <ImageBorder><Media class="rounded-lg border-4 border-purple-700 text-center max-h-96 aspect-square" src="/muhammadzeinakbar.png"/></ImageBorder> 
+        
+      </div>
+    </div>
+  </section>
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Knowledge</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+        <Feature icon="mdi:angular" title="Angular 15">
+          I am very in love with the Angular Web Framework, especially Angular version 15. My experience with Angular 15 is <b>84%</b>.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        <Feature icon="mdi:nodejs" title="NodeJS & ExpressJS">
+          NodeJS is my partner in building the REST API for my website project. I have good experience with it, but my code is still a mess. My experience with NodeJS and ExpressJS is <b>76%</b>.
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature icon="mdi:language-python" title="Python">
+          Python is a very powerful language for developing software. I've created bots for Discord and many projects with Python. My experience with Python is <b>80%</b>.
         </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        <Feature icon="mdi:language-php" title="PHP">
+          PHP is my first language for managing the backend of a web server. It's pretty easy to learn, but the syntax in PHP is a little bit confusing. My experience with PHP is <b>78%</b>.
         </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+        <Feature icon="mdi:language-ruby-on-rails" title="Ruby On Rails">
+          I am still learning Rails, but for now I don't have more time for it. I am pretty confused while reading the Rails documentation, but it's worth learning. My experience with Ruby on Rails is <b>52%</b>.
         </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+        <Feature icon="bx:bxl-django" title="Django">
+          I surely just installed Django and don't have time to learn it because my time has been wasted on college assignments and other stuff. My experience with Django was <b>10%</b>.
         </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+        <Feature icon="cib:mysql" title="MySQL">
+          Ahh, MySQL. It's my favorite database. It's easy to learn but has many strict rules. I am okay with that because it pushes me to write SQL correctly. My experience with MySQL was <b>90%</b>.
         </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
+        <Feature icon="mdi:aws" title="AWS EC2">
+          AWS It's my favorite for deploying backend servers. I usually use AWS EC2 for servers and AWS RDB for databases on the free tier.
         </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        <Feature icon="mdi:firebase" title="Firebase">
+          Firebase also has good features like real-time databases and many more. but I always use it for deploying my front-end website.
         </Feature>
       </div>
     </div>
